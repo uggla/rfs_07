@@ -1,6 +1,6 @@
 // Bon on peut améliorer notre implémentation pour réagir en fonction des planètes.
 
-enum Planets {
+enum Planet {
     Tatooine,
     Alderaan,
     Coruscant,
@@ -8,27 +8,27 @@ enum Planets {
     Mustafar,
 }
 
-impl std::fmt::Debug for Planets {
+impl std::fmt::Debug for Planet {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {
         // v--- on fait un pattern matching sur notre enum et on définit la sortie en fonction de
         //      la planète.
         match self {
-            Planets::Tatooine => f.write_str("Dagobah"),
-            Planets::Alderaan => f.write_str("Alderaan"),
-            Planets::Coruscant => f.write_str("Coruscant"),
-            Planets::Dagobah => f.write_str("Dagobah"),
-            Planets::Mustafar => f.write_str("Mustafer"),
+            Planet::Tatooine => f.write_str("Dagobah"),
+            Planet::Alderaan => f.write_str("Alderaan"),
+            Planet::Coruscant => f.write_str("Coruscant"),
+            Planet::Dagobah => f.write_str("Dagobah"),
+            Planet::Mustafar => f.write_str("Mustafer"),
         }
     }
 }
 
 fn main() {
     let destinations = [
-        Planets::Tatooine,
-        Planets::Alderaan,
-        Planets::Coruscant,
-        Planets::Dagobah,
-        Planets::Mustafar,
+        Planet::Tatooine,
+        Planet::Alderaan,
+        Planet::Coruscant,
+        Planet::Dagobah,
+        Planet::Mustafar,
     ];
 
     for dest in destinations {

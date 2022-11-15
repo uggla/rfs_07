@@ -8,7 +8,7 @@
 //  |
 //  v
 #[derive(Debug)]
-enum Planets {
+enum Planet {
     Tatooine,
     Alderaan,
     Coruscant,
@@ -18,11 +18,11 @@ enum Planets {
 
 fn main() {
     let destinations = [
-        Planets::Tatooine,
-        Planets::Alderaan,
-        Planets::Coruscant,
-        Planets::Dagobah,
-        Planets::Mustafar,
+        Planet::Tatooine,
+        Planet::Alderaan,
+        Planet::Coruscant,
+        Planet::Dagobah,
+        Planet::Mustafar,
     ];
 
     for dest in destinations {
@@ -52,14 +52,14 @@ fn main() {
 //
 //  🦉 uggla   master  …  rfs  rfs_07  solution_03  cargo expand
 //     Checking solution_03 v0.1.0 (/home/uggla/workspace/rust/rfs/rfs_07/solution_03)
-//     Finished dev [unoptimized + debuginfo] target(s) in 0.89s
+//     Finished dev [unoptimized + debuginfo] target(s) in 0.70s
 //
 // #![feature(prelude_import)]
 // #[prelude_import]
 // use std::prelude::rust_2021::*;
 // #[macro_use]
 // extern crate std;
-// enum Planets {
+// enum Planet {
 //     Tatooine,
 //     Alderaan,
 //     Coruscant,
@@ -67,29 +67,28 @@ fn main() {
 //     Mustafar,
 // }
 //
-
 //     -- La macro #[derive....], (comment on écrit des macros comme ça c'est pour plus tard).
 //     |  On voit que l'implémentation est quasi la même que l'on avait fait manuellement.
 //     v
 // #[automatically_derived]
-// impl ::core::fmt::Debug for Planets {
+// impl ::core::fmt::Debug for Planet {
 //     fn fmt(&self, f: &mut ::core::fmt::Formatter) -> ::core::fmt::Result {
 //         match self {
-//             Planets::Tatooine => ::core::fmt::Formatter::write_str(f, "Tatooine"),
-//             Planets::Alderaan => ::core::fmt::Formatter::write_str(f, "Alderaan"),
-//             Planets::Coruscant => ::core::fmt::Formatter::write_str(f, "Coruscant"),
-//             Planets::Dagobah => ::core::fmt::Formatter::write_str(f, "Dagobah"),
-//             Planets::Mustafar => ::core::fmt::Formatter::write_str(f, "Mustafar"),
+//             Planet::Tatooine => ::core::fmt::Formatter::write_str(f, "Tatooine"),
+//             Planet::Alderaan => ::core::fmt::Formatter::write_str(f, "Alderaan"),
+//             Planet::Coruscant => ::core::fmt::Formatter::write_str(f, "Coruscant"),
+//             Planet::Dagobah => ::core::fmt::Formatter::write_str(f, "Dagobah"),
+//             Planet::Mustafar => ::core::fmt::Formatter::write_str(f, "Mustafar"),
 //         }
 //     }
 // }
 // fn main() {
 //     let destinations = [
-//         Planets::Tatooine,
-//         Planets::Alderaan,
-//         Planets::Coruscant,
-//         Planets::Dagobah,
-//         Planets::Mustafar,
+//         Planet::Tatooine,
+//         Planet::Alderaan,
+//         Planet::Coruscant,
+//         Planet::Dagobah,
+//         Planet::Mustafar,
 //     ];
 //     for dest in destinations {
 //         {

@@ -1,4 +1,4 @@
-enum Planets {
+enum Planet {
     Tatooine,
     Alderaan,
     Coruscant,
@@ -7,7 +7,7 @@ enum Planets {
 }
 
 fn main() {
-    let p1 = Planets::Dagobah;
+    let p1 = Planet::Dagobah;
     println!("Flight to {:?}", p1);
     //                    ^- On peut pas imprimer le debug de notre enum car celui-ci n'implémente pas le trait
     //                    Debug. Un trait, je vois ça comme un comportement. Donc si notre type
